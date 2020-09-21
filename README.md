@@ -20,3 +20,14 @@ function pop()
     set arr[top] = 0
     set top to top -1
 ```
+* Bubble Sort
+```
+function bubblesort(a)
+  for i =0 to len(a):
+    for j=0 to len(a)-1:
+      if a[j] > a[j+1]:
+        swap(a[j],a[j+1])
+      end if
+    end for
+ end for
+```
