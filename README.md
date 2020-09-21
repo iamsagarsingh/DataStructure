@@ -49,3 +49,16 @@ while left < right do
     write "Element e does not exit"
 end while
 ```
+* Insertion Sort
+```
+function insertion(a)
+for i =1 to len(a)
+  set temp to a[i]
+  set j to i-1
+  while j>0 and a[j] > temp, do
+    a[j+1] = a[j]
+    j--;
+  end while
+  set a[j+1] to temp
+end for
+```
