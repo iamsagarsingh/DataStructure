@@ -31,3 +31,21 @@ function bubblesort(a)
     end for
  end for
 ```
+* Binary Search
+```
+function binarysearch(a,e)
+set left to 0
+set right to len(a)
+while left < right do
+  set mid to (left+right)//2
+  if a[mid] == e
+    write "element e found at mid"
+    break
+  else if a[mid] > e
+    set right = mid
+  else
+    set left = mid +1
+  if left == right and arr[mid] != e
+    write "Element e does not exit"
+end while
+```
