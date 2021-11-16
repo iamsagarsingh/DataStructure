@@ -24,8 +24,6 @@ class singlylinkedlist:
                 n = n.next
             n.next = node
 
-
-
     def insertatbeginning(self,d):
         node = Node(d)
         if not self.head:  # if self.head == None
@@ -35,13 +33,37 @@ class singlylinkedlist:
             self.head = node
             self.head.next = temp
 
+    def insertnodeatpostion(self,data,postion):
+        node = Node(data)
+        trav = self.head
+        for i in range(postion+1):
+            if i == postion:
+                prev.next = node
+                node.next = trav
+            else:
+                prev = trav
+                trav = trav.next
 sl = singlylinkedlist()
+
+print("Insertion At Beginning:")
 sl.insertatbeginning(12)
 sl.insertatbeginning(13)
 sl.insertatbeginning(14)
 
+sl.traverse()
+
+print("Insertion at End: ")
 sl.insertatend(34)
 sl.insertatend(35)
 sl.insertatend(36)
+
+sl.traverse()
+
+print("Insertion at Postition: ")
+
+
+sl.insertnodeatpostion(50,2)
+sl.insertnodeatpostion(51,4)
+sl.insertnodeatpostion(52,1)
 
 sl.traverse()
