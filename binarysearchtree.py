@@ -8,6 +8,12 @@ class Tree:
     def __init__(self):
         self.head = None
     
+    def inorder(self,root):
+        if root != None:
+            self.inorder(root.left)
+            print(root.data)
+            self.inorder(root.right)
+            
     def insert(self,data):
         node = Node(data)
         if not self.head:
@@ -35,5 +41,12 @@ t = Tree()
 t.insert(20)
 t.insert(15)
 t.insert(11)
+t.insert(18)
+
+t.insert(25)
+t.insert(22)
+
+
+t.inorder(t.head)
 
 
