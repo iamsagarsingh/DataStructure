@@ -13,6 +13,12 @@ class Tree:
             self.inorder(root.left)
             print(root.data)
             self.inorder(root.right)
+    
+    def preorder(self,root):
+        if root != None:
+            print(root.data)
+            self.preorder(root.left)
+            self.preorder(root.right)
             
     def insert(self,data):
         node = Node(data)
@@ -42,11 +48,12 @@ t.insert(20)
 t.insert(15)
 t.insert(11)
 t.insert(18)
-
 t.insert(25)
 t.insert(22)
 
-
+print("In-Order Traversal:")
 t.inorder(t.head)
-
+print("\n")
+print("Pre-Order Traversal:")
+t.preorder(t.head)
 
