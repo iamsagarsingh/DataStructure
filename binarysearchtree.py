@@ -47,7 +47,13 @@ class Tree:
 
                     trav = trav.right
                 
-            
+    def findmax(self):
+        ptr = self.head
+        while(ptr.right):
+            ptr = ptr.right
+        print(ptr.data)
+
+
 t = Tree()
 
 t.insert(20)
@@ -68,3 +74,6 @@ print("\n")
 print("Post-Order Traversal:")
 t.postorder(t.head)
 
+print("\n")
+print("Maximum element:")
+t.findmax()
