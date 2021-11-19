@@ -53,6 +53,12 @@ class Tree:
             ptr = ptr.right
         print(ptr.data)
 
+    def findmin(self):
+        ptr = self.head
+        while(ptr.left):
+            ptr = ptr.left
+        print(ptr.data)
+
 
 t = Tree()
 
@@ -77,3 +83,7 @@ t.postorder(t.head)
 print("\n")
 print("Maximum element:")
 t.findmax()
+
+print("\n")
+print("Minimum element:")
+t.findmin()
