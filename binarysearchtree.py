@@ -59,6 +59,12 @@ class Tree:
             ptr = ptr.left
         print(ptr.data)
 
+    def height(self,root):
+        if root == None:
+            return 0
+        else:
+            return 1 + max(self.height(root.left),self.height(root.right))
+
 
 t = Tree()
 
@@ -87,3 +93,7 @@ t.findmax()
 print("\n")
 print("Minimum element:")
 t.findmin()
+
+print("\n")
+print("Height of Tree:")
+print(t.height(t.head))
